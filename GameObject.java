@@ -8,7 +8,8 @@ public class GameObject{
     protected ID id;
     protected BufferedImage inputImage;
     protected boolean inAnimation = false;
-    protected BufferedImage[] image_array;
+    protected BufferedImage[] image_array_jump;
+    protected BufferedImage[] image_array_ground;
     public GameObject(int x, int y, ID id){
         this.x = x;
         this.y = y;
@@ -43,5 +44,8 @@ public class GameObject{
     }
     public boolean getMovement(){
         return inAnimation;
+    }
+    public void initialize(){
+        
     }
 }

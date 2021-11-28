@@ -35,7 +35,12 @@ public class Game extends Canvas implements Runnable {
     public Player player;
 
     public Game(){
-        new Window(WIDTH, HEIGHT, "Dinosaur Game", this);
+        player = new Player(50, 50, ID.Player);
+        handler = new Handler();
+        player.initialize();
+        handler.addObject(player);
+        new Window(WIDTH, HEIGHT, "Dinosaur Game", this, player);
+        this.start();
     }
 
     public synchronized void start(){
@@ -122,13 +127,15 @@ public class Game extends Canvas implements Runnable {
             }
         }
         else {
+            
             timer = System.currentTimeMillis();
             frames = 0;
             g.setColor(Color.green);
-            fontSize = 50;
+            fontSize = 35;
             g.setFont(new Font("TimesRoman", Font.BOLD, fontSize));
             drawCenteredString(g, "Dinosaur Game", 0, 0, WIDTH, HEIGHT);
             g.setColor(Color.white);
+            fontSize = 20;
             drawCenteredString(g, "By Pranav Kadekodi", 0, 0, WIDTH, (int)(11 * HEIGHT) / 8);
         }
         g.dispose();
