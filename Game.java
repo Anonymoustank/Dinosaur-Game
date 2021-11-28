@@ -24,7 +24,6 @@ public class Game extends Canvas implements Runnable {
     public static final int FPS = 60;
     private Thread thread;
     private boolean running = false;
-    public boolean dead = false;
     public Timer my_timer = new Timer();
     public TimerTask task = null;
     public long timer;
@@ -32,6 +31,8 @@ public class Game extends Canvas implements Runnable {
     public int frames = 0;
     public int display_fps = 0;
     public int my_score = 0;
+    public Handler handler;
+    public Player player;
 
     public Game(){
         new Window(WIDTH, HEIGHT, "Dinosaur Game", this);
@@ -97,7 +98,7 @@ public class Game extends Canvas implements Runnable {
         int fontSize = 25;
         g.setFont(new Font("TimesRoman", Font.BOLD, fontSize));
         g.fillRect(0, 0, WIDTH, HEIGHT);
-        if (dead && System.currentTimeMillis() - start_time > 1000){
+        if (player.dead && System.currentTimeMillis() - start_time > 1000){
             g.setColor(Color.white);
             fontSize = 50;
             g.setFont(new Font("TimesRoman", Font.BOLD, fontSize));
@@ -106,9 +107,9 @@ public class Game extends Canvas implements Runnable {
             drawCenteredString(g, "YOU DIED", 0, 0, WIDTH, (int)(HEIGHT / 2));
             
         }
-        else if (System.currentTimeMillis() - start_time > 2250 || dead){
+        else if (System.currentTimeMillis() - start_time > 2250 || player.dead){
             //player.has_started = true;
-            //handler.render(g);
+            handler.render(g);
             g.setColor(Color.red);
             g.drawString("Score: " + my_score, WIDTH - 125, 450);
             if (System.currentTimeMillis() - timer > 1000){
