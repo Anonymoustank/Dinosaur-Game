@@ -29,7 +29,7 @@ func run_animation() -> void:
 	if is_on_floor():
 		anim.play("Run")
 	else:
-		anim.stop()
+		anim.play("Jump")
 		
 
 # Called when the node enters the scene tree for the first time.
