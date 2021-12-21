@@ -1,4 +1,4 @@
-#Dinosaur Game
+**Dinosaur Game**
 
 Link to Dinosaur Animations: https://www.gameart2d.com/free-dino-sprites.html
 
