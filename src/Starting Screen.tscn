@@ -1,0 +1,18 @@
+[gd_scene format=2]
+
+[node name="Starting Screen" type="RichTextLabel"]
+margin_right = 184.0
+margin_bottom = 112.0
+rect_clip_content = false
+bbcode_enabled = true
+bbcode_text = "Press Enter or Space to Start
+
+Instructions:
+Press W or the Up Arrow to jump over the obstacles!"
+text = "Press Enter or Space to Start
+
+Instructions:
+Press W or the Up Arrow to jump over the obstacles!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
