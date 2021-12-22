@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Images/tilesheet_complete.png" type="Texture" id=1]
 [ext_resource path="res://src/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Score.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Starting Screen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Starting Screen.gd" type="Script" id=5]
+[ext_resource path="res://src/Death Screen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Death Screen.gd" type="Script" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -38,19 +40,27 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 64, 32 )
 format = 1
-tile_data = PoolIntArray( 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1572880, 0, 0 )
+tile_data = PoolIntArray( 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -8, 552 )
 
 [node name="Score" parent="." instance=ExtResource( 3 )]
-margin_left = 8.0
-margin_top = 328.0
-margin_bottom = 368.0
+margin_left = 920.0
+margin_top = 24.0
+margin_right = 1000.0
+margin_bottom = 48.0
 
 [node name="Starting Screen" parent="." instance=ExtResource( 4 )]
-margin_left = 416.0
-margin_top = 304.0
-margin_right = 824.0
-margin_bottom = 416.0
+margin_left = 368.0
+margin_top = 192.0
+margin_right = 776.0
+margin_bottom = 304.0
 script = ExtResource( 5 )
+
+[node name="Death Screen" parent="." instance=ExtResource( 6 )]
+margin_left = 488.0
+margin_top = 280.0
+margin_right = 576.0
+margin_bottom = 320.0
+script = ExtResource( 7 )
