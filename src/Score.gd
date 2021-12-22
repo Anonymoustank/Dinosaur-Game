@@ -17,7 +17,5 @@ func _process(delta: float) -> void:
 		Global.current_time = OS.get_unix_time()
 		Global.elapsed_time = Global.current_time - Global.time_start
 	self.text = "Score: " + str(Global.elapsed_time)
-	if Global.elapsed_time >= 4:
-		Global.dead = true
 
 
