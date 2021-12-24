@@ -13,18 +13,18 @@ func _physics_process(delta: float) -> void:
 		run_animation()
 		apply_gravity(delta)
 	else:
-		anim.stop()
+		anim.stop() #stop all animations and make sure screen is frozen once death happens
 
 func check_jump() -> void:
 	if Input.is_action_pressed("move_up") and is_on_floor():
-		velocity.y -= Global.gravity * 0.75
+		velocity.y -= Global.gravity * 0.75 #change velocity if player wants to jump and is on floor
 
 func apply_gravity(delta: float) -> void:
-	velocity.y += Global.gravity * delta
+	velocity.y += Global.gravity * delta #make sure gravity is applied to the player
 	velocity = move_and_slide(velocity, Global.FLOOR_NORMAL)
 
 func run_animation() -> void:
-	if is_on_floor():
+	if is_on_floor(): #run different player animations depending on whether or not you are jumping
 		anim.play("Run")
 	else:
 		anim.play("Jump")

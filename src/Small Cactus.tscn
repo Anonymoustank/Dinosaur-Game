@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Images/Small Cactus.png" type="Texture" id=1]
-[ext_resource path="res://src/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://src/Small Cactus.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 48.25 )
@@ -28,5 +28,3 @@ monitorable = false
 position = Vector2( 0, -48.25 )
 shape = SubResource( 1 )
 one_way_collision_margin = 0.0
-
-[connection signal="body_entered" from="CollisionDetector" to="." method="_on_CollisionDetector_body_entered"]
