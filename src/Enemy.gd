@@ -2,7 +2,7 @@ extends KinematicBody2D
 class_name Enemy
 
 var velocity = Vector2.ZERO
-var speed = -3
+var speed = -3 - (Global.elapsed_time / 5)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,5 +18,6 @@ func _physics_process(delta: float) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	speed = -3 - (Global.elapsed_time / 5)
 	if self.global_position.x < -150: #delete enemy at this position (once it's entirely out of frame)
 		queue_free()
