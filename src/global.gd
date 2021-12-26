@@ -10,6 +10,7 @@ const FLOOR_NORMAL = Vector2.UP
 onready var sound_player = get_tree().get_root().get_node("Ground/Player/AudioStreamPlayer2D")
 onready var jump_sound = preload("res://src/Audio/Jump.mp3")
 onready var death_sound = preload("res://src/Audio/Game Over.mp3")
+onready var startup_sound = preload("res://src/Audio/Startup.mp3")
 
 func play_sound(stream: AudioStreamMP3) -> void: #plays audio
 	sound_player.stream = stream

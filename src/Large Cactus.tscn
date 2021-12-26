@@ -4,13 +4,13 @@
 [ext_resource path="res://src/Enemy.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 447.652, 1188 )
+extents = Vector2( 482.087, 1188 )
 
 [node name="Large Cactus" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( 82, -74.9999 )
+position = Vector2( 84, -74.9999 )
 scale = Vector2( 0.0580808, 0.0580808 )
 shape = SubResource( 1 )
 
