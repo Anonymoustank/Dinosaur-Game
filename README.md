@@ -13,3 +13,7 @@ Link to Dinosaur Icon: https://www.flaticon.com/free-icon/dinosaur_145315#
 Link to Font Used for the Death Screen and the Starting Screen: https://www.1001fonts.com/november-font.html 
 
 Link to Font Used for the Score: https://www.1001fonts.com/wheaton-capitals-font.html 
+
+Link to Game Over Sound: https://youtu.be/b3Ww6sws2qg 
+
+Link to Jump Sound: https://youtu.be/BT0C7ZI2m7Y 

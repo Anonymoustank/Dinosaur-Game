@@ -10,13 +10,14 @@ func _physics_process(delta: float) -> void:
 		run_animation()
 		apply_gravity(delta)
 		if self.global_position.x != position_x: #made to filter for when collisions aren't detected, but players are displaced by enemiy collisions
-			Global.dead = true
+			Global.die()
 	else:
 		anim.stop() #stop all animations and make sure screen is frozen once death happens
 
 func check_jump() -> void:
 	if Input.is_action_pressed("move_up") and is_on_floor():
 		velocity.y -= Global.gravity * 0.75 #change velocity if player wants to jump and is on floor
+		Global.play_sound(Global.jump_sound)
 
 func apply_gravity(delta: float) -> void:
 	velocity.y += Global.gravity * delta #make sure gravity is applied to the player
