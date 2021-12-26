@@ -9,16 +9,6 @@ extents = Vector2( 482.087, 1274.09 )
 [node name="Large Cactus" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="CollisionDetector" type="Area2D" parent="."]
-position = Vector2( 80, 0 )
-collision_layer = 0
-monitorable = false
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionDetector"]
-position = Vector2( 0, -80 )
-scale = Vector2( 0.0580808, 0.0580808 )
-shape = SubResource( 1 )
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2( 80, -80 )
 scale = Vector2( 0.0580808, 0.0580808 )

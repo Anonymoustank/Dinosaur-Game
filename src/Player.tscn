@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 44, 48 )
+extents = Vector2( 32, 24 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "Jump"
@@ -65,7 +65,7 @@ hframes = 20
 frame = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 76, -56 )
+position = Vector2( 68, -32 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -73,3 +73,7 @@ reset_on_save = false
 anims/Jump = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 anims/Run = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 96, -80 )
+shape = SubResource( 1 )
