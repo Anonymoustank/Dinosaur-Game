@@ -34,9 +34,9 @@ func spawn_enemy(scene: PackedScene) -> void:
 
 func create_enemy() -> void:
 	var random_num = random_num(1, 3)
-	if random_num == 0: #spawn large cactus
+	if random_num == 1: #spawn large cactus
 		spawn_enemy(base_large_cactus)
-	elif random_num == 0: #spawn small cactus
+	elif random_num == 2: #spawn small cactus
 		spawn_enemy(base_cactus)
 	else: #spawn triple cactus
 		spawn_enemy(base_triple_cactus)
