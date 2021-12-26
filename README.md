@@ -1,4 +1,7 @@
-**Dinosaur Game**
+***Dinosaur Game***
+
+**You can download the Windows or Linux executables and play this game without any other dependencies."
+
 
 Link to Dinosaur Animations: https://www.gameart2d.com/free-dino-sprites.html
 
