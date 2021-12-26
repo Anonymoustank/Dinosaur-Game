@@ -69,4 +69,4 @@ margin_bottom = 320.0
 script = ExtResource( 7 )
 
 [node name="Small Cactus" parent="." groups=["ENEMIES"] instance=ExtResource( 8 )]
-position = Vector2( 1040, 560 )
+position = Vector2( 680, 560 )

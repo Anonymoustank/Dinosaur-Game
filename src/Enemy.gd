@@ -15,7 +15,6 @@ func _physics_process(delta: float) -> void:
 		if collision and collision.collider.name == "Player": #if a collision happens (and it's with the player, not the tilemap), the player dies
 			Global.dead = true
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	speed = -3 - (Global.elapsed_time / 5)

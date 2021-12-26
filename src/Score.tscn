@@ -1,11 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Score.gd" type="Script" id=1]
+[ext_resource path="res://src/Fonts/wheaton-capitals/wheaton capitals.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
 
 [node name="Score" type="RichTextLabel"]
-margin_right = 72.0
+margin_right = 96.0
 margin_bottom = 40.0
 rect_clip_content = false
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "Score: 0"
 text = "Score: 0"

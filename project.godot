@@ -22,11 +22,21 @@ _global_script_class_icons={
 
 config/name="Dinosaur Game"
 run/main_scene="res://src/Ground.tscn"
+boot_splash/fullsize=false
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://src/global.gd"
+
+[display]
+
+window/size/resizable=false
+
+[global]
+
+resizable=false
+fullscreen=false
 
 [input]
 

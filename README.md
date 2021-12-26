@@ -9,3 +9,7 @@ Link to Triple-Spiked Cactus Art: https://flyclipart.com/large-cactus-sprite-spr
 Link to Small Cactus Art: https://www.vhv.rs/viewpic/hbibiTm_transparent-sprite-clipart-cactus-clipart-png-png-download/ 
 
 Link to Dinosaur Icon: https://www.flaticon.com/free-icon/dinosaur_145315# 
+
+Link to Font Used for the Death Screen and the Starting Screen: https://www.1001fonts.com/november-font.html 
+
+Link to Font Used for the Score: https://www.1001fonts.com/wheaton-capitals-font.html 

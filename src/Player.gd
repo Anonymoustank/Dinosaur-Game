@@ -1,17 +1,16 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
 var velocity = Vector2.ZERO
 onready var anim = $AnimationPlayer
+const position_x = 0 #starting x position for player
 
 func _physics_process(delta: float) -> void:
 	if Global.started and !Global.dead:
 		check_jump()
 		run_animation()
 		apply_gravity(delta)
+		if self.global_position.x != position_x: #made to filter for when collisions aren't detected, but players are displaced by enemiy collisions
+			Global.dead = true
 	else:
 		anim.stop() #stop all animations and make sure screen is frozen once death happens
 
