@@ -3,6 +3,7 @@ extends Node2D
 var base_cactus = preload("res://src/Small Cactus.tscn") #load small cactus
 var base_large_cactus = preload("res://src/Large Cactus.tscn") #load big cactus
 var base_triple_cactus = preload("res://src/Triple Cactus.tscn") #load big cactus
+var base_double_cactus = preload("res://src/Double Cactus.tscn")
 var new_enemy_time = 5 #elapsed time to load new enemy
 
 var rng = RandomNumberGenerator.new() #random number generator
@@ -33,11 +34,13 @@ func spawn_enemy(scene: PackedScene) -> void:
 	add_child(new_cactus)
 
 func create_enemy() -> void:
-	var random_num = random_num(1, 3)
+	var random_num = random_num(1, 4)
 	if random_num == 1: #spawn large cactus
 		spawn_enemy(base_large_cactus)
 	elif random_num == 2: #spawn small cactus
 		spawn_enemy(base_cactus)
-	else: #spawn triple cactus
+	elif random_num == 3: #spawn triple cactus
 		spawn_enemy(base_triple_cactus)
+	else: #spawn double cactus
+		spawn_enemy(base_double_cactus)
 		
