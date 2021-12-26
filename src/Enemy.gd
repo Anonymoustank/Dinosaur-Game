@@ -18,5 +18,5 @@ func _physics_process(delta: float) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	speed = -3 - (Global.elapsed_time / 5.0)
-	if self.global_position.x < -150: #delete enemy at this position (once it's entirely out of frame)
+	if self.global_position.x < -250: #delete enemy at this position (once it's entirely out of frame)
 		queue_free()
