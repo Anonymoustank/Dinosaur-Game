@@ -10,9 +10,10 @@ var rng = RandomNumberGenerator.new() #random number generator
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.play_sound(Global.startup_sound) # Replace with function body.
 	if OS.get_name() == "HTML5":
 		OS.set_window_maximized(true)
+	else:
+		Global.play_sound(Global.startup_sound) #startup sound is bugged on HTML5, so we don't play it
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
