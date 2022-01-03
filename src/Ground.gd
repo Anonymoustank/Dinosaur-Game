@@ -17,7 +17,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if !Global.dead and Global.started:
+	if !Global.dead and Global.started and !Global.paused:
 		if Global.elapsed_time != 0 and Global.elapsed_time >= new_enemy_time: #spawn new cactus every set amount of time
 			if Global.elapsed_time >= 75:
 				new_enemy_time += 1.5
