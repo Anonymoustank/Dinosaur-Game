@@ -15,3 +15,4 @@ func _input(event) -> void:
 func _process(delta: float) -> void:
 	if Global.paused:
 		Global.pause_time += delta
+		Global.current_time += delta
