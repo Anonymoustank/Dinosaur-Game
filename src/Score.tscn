@@ -7,8 +7,8 @@
 font_data = ExtResource( 2 )
 
 [node name="Score" type="RichTextLabel"]
-margin_right = 96.0
-margin_bottom = 40.0
+margin_right = 228.0
+margin_bottom = 69.0
 rect_clip_content = false
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )

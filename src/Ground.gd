@@ -14,6 +14,7 @@ func _ready() -> void:
 		OS.set_window_maximized(true)
 	else:
 		Global.play_sound(Global.startup_sound) #startup sound is bugged on HTML5, so we don't play it
+	Global.load_score()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
