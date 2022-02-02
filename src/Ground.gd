@@ -13,7 +13,7 @@ func _ready() -> void:
 	if OS.get_name() == "HTML5":
 		OS.set_window_maximized(true)
 	else:
-		Global.play_sound(Global.startup_sound) #startup sound is bugged on HTML5, so we don't play it
+		GlobalAudioStreamPlayer.play_sound(GlobalAudioStreamPlayer.startup_sound)
 	Global.load_score()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,7 +25,12 @@ func _process(delta: float) -> void:
 			else:
 				new_enemy_time += (4 - Global.elapsed_time/25)
 			create_enemy()
-
+	elif (Global.dead):
+		if Input.is_action_just_pressed("ui_focus_next"):
+			get_parent().add_child(load("res://src/Ground.tscn").instance())
+			queue_free()
+			Global.reload()
+			
 func random_num(minimum: int, maximum: int) -> int: #returns random number between range (inclusive)
 	rng.randomize()
 	return rng.randi_range(minimum, maximum)

@@ -77,5 +77,3 @@ anims/Run = SubResource( 2 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 96, -80 )
 shape = SubResource( 1 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

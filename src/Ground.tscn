@@ -57,17 +57,18 @@ margin_right = 1015.0
 margin_bottom = 83.0
 
 [node name="Starting Screen" parent="." instance=ExtResource( 4 )]
-margin_left = 368.0
-margin_top = 192.0
-margin_right = 776.0
-margin_bottom = 304.0
+margin_left = 371.0
+margin_top = 178.0
+margin_right = 779.0
+margin_bottom = 324.0
 script = ExtResource( 5 )
 
 [node name="Death Screen" parent="." instance=ExtResource( 6 )]
-margin_left = 488.0
-margin_top = 280.0
-margin_right = 576.0
-margin_bottom = 320.0
+margin_left = 424.0
+margin_top = 200.0
+margin_right = 614.0
+margin_bottom = 240.0
+rect_scale = Vector2( 2, 2 )
 script = ExtResource( 7 )
 
 [node name="Small Cactus" parent="." groups=["ENEMIES"] instance=ExtResource( 8 )]
@@ -75,8 +76,9 @@ position = Vector2( 680, 560 )
 
 [node name="Pauser" parent="." instance=ExtResource( 10 )]
 pause_mode = 2
-margin_left = 488.0
+margin_left = 408.0
 margin_top = 152.0
-margin_right = 592.0
+margin_right = 512.0
 margin_bottom = 184.0
+rect_scale = Vector2( 2, 2 )
 script = ExtResource( 11 )
