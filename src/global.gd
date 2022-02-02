@@ -26,6 +26,7 @@ func reload():
 	started = false
 	elapsed_time = 0
 	current_time = 0
+	pause_time = 0
 
 func save_score():
 	var file = File.new()
