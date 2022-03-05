@@ -8,6 +8,7 @@ func _ready():
 	
 func _process(delta: float) -> void:
 	if !Global.dead and Global.started and !Global.paused:
+		speed = -3 - (Global.elapsed_time / 5.0)
 		position.x += speed
 		_attempt_reposition()
 	
