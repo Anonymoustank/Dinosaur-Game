@@ -10,7 +10,7 @@ var pause_time = 0 #time game spent paused
 const FLOOR_NORMAL = Vector2.UP
 var score_file = "user://new_score.save" #saves highscores
 var highscore = 0
-var times_played_again = 0 #how many tiems you've played the game
+var times_played_again = 0 #how many times you've played the game
 var cactus_escaped = 0 #total amount of cacti you've gotten past (only counts if they've left the screen)
 var save_file_data = {"highscore": 0, "times_played_again": 0, "cactus_escaped": 0}
 
